@@ -63,7 +63,28 @@ print(a or b)
 
 # Print not a is False
 print(not a)
+#=============================================================
+# Strings
+k = "hello world"
+k.upper() #Uppercase
+k.lower() #Lowercase
+k.title() #Capitalisation
 
+y = k[::-1] # reverses the string
+# Output: dlrow olleh
+
+'hello' in k # True
+
+''.join(['My', 'name', 'is', 'Simon']) # MynameisSimon
+'My name is Simon'.split()             # ['My', 'name', 'is', 'Simon']
+k.replace("world", "planet")           # hello planet
+
+# String Formatting
+name = 'Pete'
+'Hello %s' % name # "Hello Pete"
+
+num = 5
+'I have %d apples' % num  # "I have 5 apples"
 
 #=============================================================
 # DataType Output: str
@@ -141,7 +162,7 @@ while count < 3:
 
 #===============================================================
 # Functions
-def evenOdd(x):
+def evenOdd(x = 0):
     if x % 2 == 0:
         print("even")
     else:
@@ -156,6 +177,24 @@ calc = lambda num: "Even number" if num % 2 == 0 else "Odd number"
 for i in range(5):
     print(i, end=" ")
 print()
+
+#===============================================================
+# Args, Kwargs
+# *args and **kwargs allow you to pass an undefined number of arguments and keywords when calling a function.
+ def some_function(*args, **kwargs):
+     pass
+
+# call some_function with any number of arguments
+some_function(arg1, arg2, arg3)
+
+# call some_function with any number of keywords
+some_function(key1=arg1, key2=arg2, key3=arg3)
+
+# call both, arguments and keywords
+some_function(arg, key1=arg1)
+
+# or none
+some_function()
 
 #===============================================================
 # OOP
